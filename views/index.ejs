@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<h1>Mini Message</h1>
+
+		<ul>
+			<% for (message of messages) { %>
+			<li>
+				<%= message.text %> <%= message.user %> <%=
+				message.added.toLocaleTimeString() %>
+			</li>
+			<a href="/<%= message.id %>">Check this message</a>
+			<% } %>
+		</ul>
+	</body>
+</html>
